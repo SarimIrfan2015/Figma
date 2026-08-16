@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    margin: auto;
+    background: #000;
+    padding-bottom: 78px;
+}
+
+.header {
+    height: 65px;
+    padding: 8px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #000;
+    border-bottom: 1px solid #151515;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    width: 46px;
+    height: 46px;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 38px;
+    left: -3px;
+    top: 4px;
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        #00b7ff,
+        #5755ff,
+        #ff49bd
+    );
+    transform: rotate(18deg);
+}
+
+.logo::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 13px solid white;
+    left: 17px;
+    top: 14px;
+}
+
+.logo span {
+    font-size: 9px;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    margin-left: 5px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.search-btn,
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-icon {
+    width: 19px;
+    height: 19px;
+    display: block;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.search-icon::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: white;
+    right: -6px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+
+.menu-btn {
+    width: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 2px;
+    background: white;
+}
+
+.videos {
+    padding: 25px 16px 0;
+}
+
+.video-card {
+    margin-bottom: 17px;
+    cursor: pointer;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 157px;
+    display: block;
+    object-fit: cover;
+}
+
+.video-info {
+    display: flex;
+    gap: 12px;
+    padding-top: 14px;
+}
+
+.avatar {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.details {
+    min-width: 0;
+}
+
+.details h2 {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.meta {
+    color: #d2d2d2;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.meta span {
+    margin: 0 6px;
+}
+
+.author {
+    color: #d2d2d2;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.bottom-nav {
+    width: 100%;
+    max-width: 390px;
+    height: 65px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    background: #000;
+    border: 1px solid #777;
+    display: flex;
+    z-index: 20;
+}
+
+.nav-item {
+    width: 25%;
+    height: 100%;
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.nav-item.active {
+    color: white;
+}
+
+.home-icon {
+    width: 17px;
+    height: 14px;
+    border: 2px solid white;
+    border-top: none;
+    position: relative;
+    margin-top: 5px;
+}
+
+.home-icon::before {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(45deg);
+    left: 1px;
+    top: -7px;
+}
+
+.history-icon {
+    width: 19px;
+    height: 19px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.history-icon::before {
+    content: "";
+    width: 6px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
+
+.history-icon::after {
+    content: "";
+    width: 2px;
+    height: 6px;
+    background: white;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+}
+
+.collection-icon {
+    width: 19px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 3px;
+    position: relative;
+}
+
+.collection-icon::before {
+    content: "";
+    width: 8px;
+    height: 4px;
+    border: 2px solid white;
+    border-bottom: none;
+    position: absolute;
+    left: 3px;
+    top: -6px;
+    border-radius: 3px 3px 0 0;
+}
+
+.user-icon {
+    width: 19px;
+    height: 19px;
+    position: relative;
+}
+
+.user-icon::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 0;
+}
+
+.user-icon::after {
+    content: "";
+    width: 15px;
+    height: 8px;
+    border: 2px solid white;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .app {
+        box-shadow: 0 0 40px #000;
+    }
+}
